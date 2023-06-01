@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f9f9;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.inner_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.p {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h4 {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.inner_container:hover {
+  background-color: rgba(219, 230, 230, 0.786);
+  transition: color 600ms ease-out;
+}
+
+.happening {
+  font-size: 18px;
+  font-weight: 800;
+  margin-left: 16px;
+}
+
+.btn {
+  color: var(--twitter-color);
+  background-color: var(--twitter-background);
+  border: none;
+  height: 48px;
+  font-weight: 600;
+  width: 100%;
+}
