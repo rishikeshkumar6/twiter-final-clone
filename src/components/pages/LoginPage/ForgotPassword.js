@@ -1,5 +1,4 @@
 import React from "react";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import TextField from "@mui/material/TextField";
 import styles from "./ForgotPassword.module.css";
 import Button from "@mui/material/Button";
@@ -38,7 +37,7 @@ export default function ForgotPassword() {
               style={{ width: "19rem", marginTop: "30px" }}
             />
           </div>
-          <Button className={styles.btn} variant="contained">
+          <Button className={styles.btn} variant="contained" onClick={handleChange}>
             Next
           </Button>
         </div>
