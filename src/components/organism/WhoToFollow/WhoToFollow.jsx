@@ -27,6 +27,7 @@ function WhoToFollow() {
           <img
             src="https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.2.1157341070.1685540418&semt=sph"
             className={styles.image}
+            alt="img"
           />
           <div className={styles.name}>
             <span className={styles.inner_name}>
@@ -43,6 +44,7 @@ function WhoToFollow() {
           <img
             src="https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.2.1157341070.1685540418&semt=sph"
             className={styles.image}
+            alt="img"
           />
           <div className={styles.name}>
             <span className={styles.inner_name}>
@@ -59,6 +61,7 @@ function WhoToFollow() {
           <img
             src="https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.2.1157341070.1685540418&semt=sph"
             className={styles.image}
+            alt="img"
           />
           <div className={styles.name}>
             <span className={styles.inner_name}>
@@ -75,6 +78,7 @@ function WhoToFollow() {
           <img
             src="https://img.freepik.com/free-icon/man_318-233556.jpg?size=626&ext=jpg&ga=GA1.2.1157341070.1685540418&semt=sph"
             className={styles.image}
+            alt="img"
           />
           <div className={styles.name}>
             <span className={styles.inner_name}>

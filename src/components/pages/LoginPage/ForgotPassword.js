@@ -7,11 +7,11 @@ import { FaTwitter } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
 export default function ForgotPassword() {
-  const [password, setpassword] = useState("");
-  const [message, setmessage] = useState("");
+  const [password, setPassword] = useState("");
+
 
   function handleChange(e) {
-    setpassword(e.target.value);
+    setPassword(password);
   }
   return (
     <div>

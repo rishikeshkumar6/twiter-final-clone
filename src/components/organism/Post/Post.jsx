@@ -28,7 +28,9 @@ function Post({ name, userName, verified, text, image, avatar }) {
             <p>This is my Twitter Clone</p>
           </div>
         </div>
-        <img src="https://media4.giphy.com/media/VaTY0AviQJDHWDeMdp/200w.webp?cid=ecf05e47doelc6reiwoacntswxbmeq0vwzfz1f4wl6pfwmox&ep=v1_gifs_trending&rid=200w.webp&ct=g" />
+        <img src="https://media4.giphy.com/media/VaTY0AviQJDHWDeMdp/200w.webp?cid=ecf05e47doelc6reiwoacntswxbmeq0vwzfz1f4wl6pfwmox&ep=v1_gifs_trending&rid=200w.webp&ct=g" 
+        alt="img"
+        />
 
         <div className={styles.post_footer}>
           <ChatBubbleOutlineIcon fontSize="small" />
