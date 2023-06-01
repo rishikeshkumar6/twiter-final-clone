@@ -112,7 +112,7 @@ export default function Details() {
         {nevigate ? navigate() : " "}
         {alert ? (
           <Alert severity="info">
-            <strong>Fill Properly.</strong>
+            <strong>Invalid Credentials.</strong>
           </Alert>
         ) : (
           " "
