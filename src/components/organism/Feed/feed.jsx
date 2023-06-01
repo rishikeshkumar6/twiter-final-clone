@@ -13,7 +13,7 @@ function Feed() {
   return (
     <div className={styles.feed}>
       <div className={styles.feed_header}>
-        <h2>Feed</h2>
+        <h2>Home</h2>
       </div>
 
       <TweetBox />
