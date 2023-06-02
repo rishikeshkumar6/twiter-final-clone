@@ -12,46 +12,35 @@ export default function Details() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [useEmail, setUseEmail] = useState("");
+  const [useEmail, setUseEmail] = useState(true);
+  const [alertMessage, setAlertMessage] = useState("");
 
-  const [nevigate, setnevigate] = useState(false);
-  const [alert, setalert] = useState(false);
+  const navigate = useNavigate();
 
-  const nevigates = useNavigate();
-
-  function navigate() {
-    nevigates("/login");
-  }
-
-  const Storage = localStorage.getItem("signupData")
-    ? JSON.parse(localStorage.getItem("signupData"))
-    : [];
-
-  const handleToggle = (e) => {
+  function handleToggle(e) {
     e.preventDefault();
     setUseEmail(!useEmail);
-  };
+  }
 
   function handleSignup() {
-    const temp = {
-      name: name,
-      email: email,
-      phone: phone,
-    };
+    const existingData = JSON.parse(localStorage.getItem("signupData")) || [];
+    const isEmailExists = existingData.some((data) => data.email === email);
 
-    localStorage.setItem("signupData", JSON.stringify([...Storage, temp]));
-
-    const email_regex =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-    if (
-      name === "" ||
-      (phone.length < 10 && email_regex.test(email) === false)
-    ) {
-      setnevigate(false);
-      setalert(true);
+    if (name === "" || (useEmail && email === "") || (!useEmail && phone === "")) {
+      setAlertMessage("Please fill the form properly.");
+    } else if (isEmailExists) {
+      setAlertMessage("Email already exists.");
     } else {
-      setnevigate(true);
+      const newData = {
+        name: name,
+        email: email,
+        phone: phone,
+      };
+
+      existingData.push(newData);
+      localStorage.setItem("signupData", JSON.stringify(existingData));
+
+      navigate("/login");
     }
   }
 
@@ -109,13 +98,10 @@ export default function Details() {
       </div>
       <div className={styles.btn}>
         <SignUpButton handleSignup={handleSignup} />
-        {nevigate ? navigate() : " "}
-        {alert ? (
+        {alertMessage && (
           <Alert severity="info">
-            <strong>Invalid Credentials.</strong>
+            <strong>{alertMessage}</strong>
           </Alert>
-        ) : (
-          " "
         )}
       </div>
     </div>
